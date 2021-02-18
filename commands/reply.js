@@ -6,7 +6,7 @@ module.exports = {
     
     execute(message, args, Client){
       const Discord = require('discord.js');
-      const prefix = "!";
+      const prefix = "<";
  
 
       if(!message.member.hasPermission('MANAGE_MESSAGES')){
@@ -18,11 +18,11 @@ module.exports = {
       const modResponse = args.slice(2).join(" ");
 
       if(!user){
-          message.channel.send(`${message.author.username}, You need to give the id of the user you want to reply to.\nCorrect usage of this command is !reply <userID> <Your Response>`)
+          message.channel.send(`${message.author.username}, You need to give the id of the user you want to reply to.\nCorrect usage of this command is <reply <userID> <Your Response>`)
           return;
       }
       if(!modResponse){
-          message.channel.send(`${message.author.username}, You need to put what you want to reply with.\nCorrect usage of this command is !reply <userID> <Your Response>`)
+          message.channel.send(`${message.author.username}, You need to put what you want to reply with.\nCorrect usage of this command is <reply <userID> <Your Response>`)
           return;
       }
 
