@@ -13,6 +13,10 @@ module.exports = {
           message.reply(`You don't have access to this command`)
           return;
       }
+      if(message.author.id === '740277483089166336'){
+        message.channel.send(`Shawty, you have been blacklisted from replying to users. You cannot be trusted`)
+        return;
+      }
       const user = message.mentions.members.first() || Client.users.cache.get(args[1]);
 
       const modResponse = args.slice(2).join(" ");
