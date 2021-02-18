@@ -52,7 +52,7 @@ Client.on('message', async (message) => {
     .setDescription(`Message from ${msgAuthor}` + `#` + `${msgAuthorDiscrim}`)
     .setAuthor(`User ID: ${message.author.id}`)
     .addField(`Message:`, msg)
-    .addField(`\u200B`, `\`\`\`\nTo reply to this modmail message, type !reply ${message.author.id} <your response>\`\`\``)
+    .addField(`\u200B`, `\`\`\`\nTo reply to this modmail message, type <reply ${message.author.id} <your response>\`\`\``)
     .setFooter(`React with ❌ to close this conversation`)
     .setTimestamp()
     if(message.channel.type == "dm") {
